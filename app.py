@@ -4,6 +4,6 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
         self.end_headers()
-        self.wfile.write(b"Hello from Docker v2! Adding a test line")
+        self.wfile.write(b"Hello from Kubernetes!")
 
 HTTPServer(("", 8080), Handler).serve_forever()
