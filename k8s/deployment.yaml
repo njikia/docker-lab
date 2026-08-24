@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-docker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-docker
+  template:
+    metadata:
+      labels:
+        app: hello-docker
+    spec:
+      containers:
+        - name: hello-docker
+          image: metall1st3/hello-docker:b286c45d114eaa508571b272bf9d2f79de170111
+          ports:
+            - containerPort: 8080
