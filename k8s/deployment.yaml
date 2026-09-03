@@ -17,3 +17,9 @@ spec:
           image: metall1st3/hello-docker:b286c45d114eaa508571b272bf9d2f79de170111
           ports:
             - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 2
+            periodSeconds: 5
