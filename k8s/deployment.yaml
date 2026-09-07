@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hello-docker
-          image: metall1st3/hello-docker:79ade3364daeef4cc1f2398ad753dae095450f00
+          image: metall1st3/hello-docker:4284ea0454d6fac0530c86cf12f0e0aadbe22450
           ports:
             - containerPort: 8080
           readinessProbe:
